@@ -1,13 +1,17 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+'''
+Determines the linear regression line on
+the given input array of points [x][y]
+'''
 def LS(array):
 
     sumxy = 0.0
     sumx = 0.0
     sumy = 0.0
     sumxx = 0.0
-    
+ 
     x = 0
     y = 1
 
@@ -29,6 +33,10 @@ def LS(array):
 
     return LinearRegression
 
+'''
+Plots the differences between the linear regression line
+and the given points which we attempted to fit the line to.
+'''
 def plotDifferences(points, fit):
 
     x = []
@@ -39,6 +47,10 @@ def plotDifferences(points, fit):
         iter = [i, i]
         plt.plot(iter, line,'b', label='Difference', linewidth=2)
 
+'''
+Plots the linear regression line,
+Or really any array as a line
+'''
 def plotLinearRegression(fit):
 
     x = []
@@ -50,6 +62,9 @@ def plotLinearRegression(fit):
     plt.plot(x, y, 'g', label='Linear Regression', linewidth=2)
 
 
+'''
+Plots various points given an input array
+'''
 def plotPoints(points):
     
     x = []
@@ -62,8 +77,9 @@ def plotPoints(points):
     plt.plot(x, y,'ro')
 
 
-''' ___MAIN___ '''
 
+
+''' ___MAIN___ '''
 points = [[0, 2.2], [1, 2.2], [2, 1], [3, 3],\
 [4, 3], [5, 4], [6, 3], [7, 6], [8, 6], [9, 7],\
 [10, 11], [11, 12], [12, 14], [13, 10], [14, 11]]
